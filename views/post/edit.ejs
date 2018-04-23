@@ -1,0 +1,57 @@
+<% include ../partials/header %>
+
+<div style="padding: 20px 30px;">
+    <div class="row">
+        <div class="col s12 l9">
+            <div class="card">
+                <div class="card-action center-align">
+                    <strong>Edit Topic <%= post.title %></strong>
+                </div>
+                <div class="divider"></div>
+
+                <form action="/post/<%= post.id %>?_method=PUT" method="POST" class="content-spacing">
+
+                     <div class="row">
+                        <div class="input-field col s12 l8">
+                            <select name="category" required>
+
+                                <% category.forEach(function(categories){ %>
+                                    <option value="<%= categories._id %>"><%= categories.name %>
+                                    </option>
+                                <% }); %>
+
+                            </select>
+                            <label>Category</label>
+                        </div>
+                    </div>
+                    
+
+                    <div class="row">
+                        <div class="input-field col s12 l8">
+                            <input name="title" value="<%= post.title %>" id="post-title" type="text" class="validate" required>
+                            <label for="post-title">Title</label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-field col s12 l12">
+                            <textarea name="content" id="textarea1" class="materialize-textarea" required><%= post.content %></textarea>
+                            <label for="textarea1">Content</label>
+                        </div>
+                    </div>
+
+                    <a class="waves-effect waves-teal btn-flat">Cancel</a>
+
+                    <button class="btn waves-effect waves-light black" type="submit">Submit Topic
+                        <i class="material-icons right">send</i>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<% include ../partials/footer %>

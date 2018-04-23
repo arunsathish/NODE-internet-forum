@@ -1,0 +1,198 @@
+<% include ../partials/header %>
+
+<div class="content-spacing">
+    <div class="row">
+
+<%
+function formatDate(date) {
+    var monthNames = [
+      "Jan", "Feb", "Mar",
+      "Apr", "May", "June", "July",
+      "Aug", "Sept", "Oct",
+      "Nov", "Dec"
+    ];
+  
+    var day = date.getDate();
+    var monthIndex = date.getMonth();
+    var year = date.getFullYear();
+  
+    return monthNames[monthIndex] + ' ' + day + ', ' + year;
+  }
+  var date = formatDate(post.createdDate); 
+%>
+
+        <div class="col s12 l9">
+            <div class="card">
+                <div class="card-action">
+                    <h5><strong><%= post.title %></strong></h5>
+                </div>
+                <div class="divider"></div>
+                <div class="content-spacing">
+                    <span style="color: #9E9E9E;">
+                        <span>Posted by <a href="#">UDT</a> <br></span>
+                        <i class="tiny material-icons">schedule</i> <%= date %>
+                    </span>
+                    <span class="row">
+                        <a href="/post/<%= post.id %>/edit" class="waves-effect waves-light btn-small right white"><i class="material-icons" style="color: #9E9E9E">mode_edit</i></a>
+                    </span>
+                    <p>
+                        <%= post.content %>    
+                    </p>
+
+
+                    <div class="center-align">                    
+                        <span class="row">
+                            <a class="btn-small white"><i class="material-icons" style="color: #9E9E9E">arrow_upward</i></a>
+                            <%= post.vote %>
+                            <a class="btn-small white"><i class="material-icons" style="color: #9E9E9E">arrow_downward</i></a>
+                            <a class="waves-effect waves-light btn-small right white"><i class="material-icons" style="color: #F44336">flag</i></a>
+                        </span>
+
+                    </div>
+                    
+                </div>
+
+                <div class="divider"></div>
+                <div class="divider"></div>
+
+
+
+
+                <div class="content-spacing">
+                        <span style="color: #9E9E9E;">
+                            <span>Posted by <a href="#">UDT</a> <br></span>
+                            <i class="tiny material-icons">schedule</i> November 25, 2017
+                        </span>
+                        <span class="row">
+                            <a class="waves-effect waves-light btn-small right white"><i class="material-icons" style="color: #9E9E9E">mode_edit</i></a>
+                        </span>
+                        <p>
+                            Thoughts to this <br>
+                            So youre either happy or youre not. If you set a life purpose which achieving makes your happy.
+                        </p>
+    
+    
+                        <div class="center-align">                    
+                            <span class="row">
+                                <a class="btn-small white"><i class="material-icons" style="color: #9E9E9E">arrow_upward</i></a>
+                                102
+                                <a class="btn-small white"><i class="material-icons" style="color: #9E9E9E">arrow_downward</i></a>
+                                <a class="waves-effect waves-light btn-small right white"><i class="material-icons" style="color: #F44336">flag</i></a>
+                            </span>
+    
+                        </div>
+                        
+                    </div>
+    
+                    <div class="divider"></div>
+
+                    <div class="content-spacing">
+                            <span style="color: #9E9E9E;">
+                                <span>Posted by <a href="#">UDT</a> <br></span>
+                                <i class="tiny material-icons">schedule</i> November 25, 2017
+                            </span>
+                            <span class="row">
+                                <a class="waves-effect waves-light btn-small right white"><i class="material-icons" style="color: #9E9E9E">mode_edit</i></a>
+                            </span>
+                            <p>
+                                Thoughts to this <br>
+                                So youre either happy or youre not. If you set a life purpose which achieving makes your happy, your distracting yourself from the real intrinsic question on if you’re happy or not. You’re saying “ I have to achieve XY in order to become fulfilled later”. You’re postponing the question if you are happy to a later state in which you have achieved XY. If that state than occurs it will make you happy. Until the high of achievement fades away leaving you with either 1) being in question if you are happy or 2) finding a new mode of distraction, a new goal in life which distracts you’re from the real question again. Studies have shown that “happiness” is not increasing after reaching a certain amount of spending power.
+                                <br>
+                                I think it helps seeing happiness as a state rather than a thing which is achievable. To the core you can chose for yourself to be happy at any moment or not. It’s a purely intrinsic decision. Saying your happy because you have some certain thing is an illusion. Then you’re happiness is based on the approval of society btw the being in conformity with societies’ perception of what makes happy (nice car, house and kids, good looking wife, good job etc.) Certainly those things can be fulfilling and are fulfilling. But do you know? You don’t. It’s merely the perception of what those things will make you feel which triggers your perception of happiness. I’m talking about perceptions here because happiness is a merely subjective feeling. It means different things for each of us. When we are talking about happiness we are in fact not talking about the same thing. It’s more a category of positive feelings we say are “happiness” so in language we agree on this to make communication easier. Sadly we do not have a more precise form of communication.
+                                <br>
+                                So you can either chase what in society is commonly accepted as making you happy or you can try to not let those desires distract you from the inner state of mind which is the real “happiness”. Acknowledging that happiness is within you is scary. Now there is no more delay. No more “ I will be happy later so don’t worry” If you are not happy right now, something can be changed immediately to fix it, something is wrong right now. The fix is internal not external. The fix might be to kill your ego.
+                            </p>
+        
+        
+                            <div class="center-align">                    
+                                <span class="row">
+                                    <a class="btn-small white"><i class="material-icons" style="color: #9E9E9E">arrow_upward</i></a>
+                                    102
+                                    <a class="btn-small white"><i class="material-icons" style="color: #9E9E9E">arrow_downward</i></a>
+                                    <a class="waves-effect waves-light btn-small right white"><i class="material-icons" style="color: #F44336">flag</i></a>
+                                </span>
+        
+                            </div>
+                            
+                        </div>
+
+
+
+
+
+            </div>
+
+            <div class="card content-spacing">
+                <div>
+                    <h5>Comment</h5>
+                </div>
+                <div class="divider"></div>
+                <br>
+                <div class="row">
+                    <form action="/post/<%= post._id %>" class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea name="comment" id="textarea1" class="materialize-textarea"></textarea>
+                                <label for="textarea1">Add Comment</label>
+                            </div>
+                        </div>
+                        <button class="btn waves-effect waves-light black" name="action">Submit Reply
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- <ul class="pagination">
+                <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                <li class="active black"><a href="#!">1</a></li>
+                <li class="waves-effect"><a href="#!">2</a></li>
+                <li class="waves-effect"><a href="#!">3</a></li>
+                <li class="waves-effect"><a href="#!">4</a></li>
+                <li class="waves-effect"><a href="#!">5</a></li>
+                <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+            </ul> -->
+
+        </div>
+
+            <div class="col s12 l3">
+                <div class="card">
+                    <div class="card-action">
+                        <strong>Categories</strong>
+                    </div>
+                    <div class="divider"></div>
+                    <div style="padding: 10px 25px;">
+                        <ul>
+                            <li class="truncate">Life Purpose, Career, Entrepreneurship</li>
+                            <li class="truncate">Health, Fitness, Nutrition</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-action">
+                        <strong>Login</strong>
+                    </div>
+                    <div class="divider"></div>
+                    <div style="padding: 10px 25px;">
+                        <form>
+                            <div class="input-field">
+                                <input id="email" type="text" class="validate">
+                                <label for="email" style="color: #000000">Email</label>
+                            </div>
+                            <div class="input-field">
+                                <input id="password" type="password" class="validate">
+                                <label for="password" style="color: #000000">Password</label>
+                            </div>
+                            <button class="btn waves-effect waves-light black" type="submit" name="action">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+
+</div>
+
+
+<% include ../partials/footer %>

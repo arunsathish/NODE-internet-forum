@@ -1,0 +1,42 @@
+<% include partials/header %>
+
+
+<div style="padding: 20px 30px;">
+    <div class="row">
+
+        <div class="col s12 l12">
+            <div class="card">
+                <div class="card-title" style="padding: 10px 0px;">
+                    <h5 class="center-align">Log In</h5>
+                </div>
+                <div class="divider"></div>
+                <div style="padding: 10px 25px;">
+                    <div class="center-align">
+                        Don't have an account? <a href="/signup">Sign Up</a> 
+                    </div>
+
+                    <form action="./Dashboard/dashboard.html">
+                        <div class="row">
+                            <div class="input-field col s12 l4">
+                                <input id="email" type="text" class="validate">
+                                <label for="email" style="color: #000000">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field s12 col l4">
+                                <input id="password" type="password" class="validate">
+                                <label for="password" style="color: #000000">Password</label>
+                            </div>       
+                        </div>
+
+                        <button class="btn waves-effect waves-light black">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<% include partials/footer %>

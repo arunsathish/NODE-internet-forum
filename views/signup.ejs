@@ -1,0 +1,68 @@
+<% include partials/header %>
+
+<div style="padding: 20px 30px;">
+    <div class="row">
+
+        <div class="col s12 l12">
+            <div class="card">
+                <div class="card-title" style="padding: 10px 0px;">
+                    <h5 class="center-align">Sign Up</h5>
+                </div>
+                <div class="divider"></div>
+                <div style="padding: 10px 25px;">
+                    <div class="center-align">
+                        Existing user? <a href="/login">Log In</a> 
+                    </div>
+
+                    <form action="/signup" method="POST">
+                        <div class="row">
+                            <div class="input-field col s12 l4">
+                                <input id="email" type="text" class="validate">
+                                <label for="email" style="color: #000000">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 l4">
+                                <input id="password" type="password" class="validate">
+                                <label for="password" style="color: #000000">Password</label>
+                            </div>       
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 l4">
+                                <input id="confirm_password" type="password" class="validate">
+                                <label for="confirm_password" style="color: #000000">Confirm Password</label>
+                            </div>       
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12 l4">
+                                <select>
+                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="1">Female</option>
+                                    <option value="2">Male</option>
+                                    <option value="3">Others</option>
+                                </select>
+                                <label>Gender</label>
+                            </div>
+                        </div>
+                        <p>
+                            <label>
+                                <input type="checkbox" />
+                                <span>I agree to the <a href="">Terms</a> of Use and <a href="">Privacy Policy</a></span>
+                            </label>
+                        </p>
+
+                        <button class="btn waves-effect waves-light black" type="submit" name="action">Signup</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>
+
+<script>
+    $(document).ready(function(){
+      $('select').formSelect();
+    });
+</script>
